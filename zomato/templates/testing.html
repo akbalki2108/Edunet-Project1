@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+</head>
+
+<body>
+    <h1>Train Data:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Name</th>
+                <th>Online Order</th>
+                <th>Book Table</th>
+                <th>Rate</th>
+                <th>Votes</th>
+                <th>Location</th>
+                <th>Rest Type</th>
+                <th>Cuisines</th>
+                <th>Cost2Plates</th>
+                <th>Listed In Type</th>
+                <th>Area</th>
+                <th>Ratings</th>
+                <th>Reviews</th>
+                <th>Count</th>
+                <th>Sentiments</th>
+                <th>Summaries</th>
+                <th>Sentiment Label</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in value.train_data.iterrows %}
+            <tr>
+                <td>{{ row.url }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.online_order }}</td>
+                <td>{{ row.book_table }}</td>
+                <td>{{ row.rate }}</td>
+                <td>{{ row.votes }}</td>
+                <td>{{ row.location }}</td>
+                <td>{{ row.rest_type }}</td>
+                <td>{{ row.cuisines }}</td>
+                <td>{{ row.cost2plates }}</td>
+                <td>{{ row.listed_in_type }}</td>
+                <td>{{ row.area }}</td>
+                <td>{{ row.ratings }}</td>
+                <td>{{ row.reviews }}</td>
+                <td>{{ row.count }}</td>
+                <td>{{ row.sentiments }}</td>
+                <td>{{ row.summaries }}</td>
+                <td>{{ row.sentiment_label }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
